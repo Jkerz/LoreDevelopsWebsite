@@ -2,33 +2,61 @@
 
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133203042-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133203042-1');
+  </script>
+
   <meta charset="utf-8">
 
   <title>Joshua Kelley</title>
   <meta name="description" content="Website for Joshua Kelley and his work.">
   <meta name="author" content="Joshua Kelley">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
 
+  <!--                                              -->
+  <!-- MY CSS, FONT AWESOME ICONS, AND RALEWAY FONT -->
+  <!--                                              -->
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
-  <div class="hero">
-    <div class="navs">
-      <a href="#" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
 
+
+
+  <!--                             -->
+  <!--           HEADER            -->
+  <!--                             -->
   <div class="header">
     <h1>Joshua "Lore" Kelley</h1>
     <p>An aspiring front-end/full-stack developer</p>
+    <a class="work-btn" onClick="scrollToAbout()"><h5>Check out my work</h5></a>
   </div>
 
-  <div id="about" class="section">
+  <!--                             -->
+  <!--        HERO (NAVBAR)        -->
+  <!--                             -->
+  <div class="hero">
+    <a class="logo" onClick="scrollToTop()"><span>Lore</span>Develops</a>
+    <div class="navs">
+      <a id="home-nav" onClick="scrollToTop()" class="active">Home</a>
+      <a id="about-nav" onClick="scrollToAbout()">About</a>
+      <a id="projects-nav" onClick="scrollToProjects()">Projects</a>
+      <a id="contact-nav" onClick="scrollToContact()">Contact</a>
+    </div>
+  </div>
+
+  <!--                             -->
+  <!--        ABOUT SECTION        -->
+  <!--                             -->
+  <div id="about" class="section about">
     <h2>About Me</h2>
     <div class="after-line"></div>
     <div class="about-wrapper">
@@ -76,42 +104,42 @@
 
         <h3>Front-End Skills</h3>
 
-        <div class="skill">
+        <div class="skill html">
           <div class="fill" style="width:95%">
             <div class="tag">HTML</div>
           </div>
           <span class="perct">95%</span>
         </div>
 
-        <div class="skill">
+        <div class="skill css">
           <div class="fill" style="width:85%">
             <div class="tag">CSS</div>
           </div>
           <span class="perct">85%</span>
         </div>
 
-        <div class="skill">
+        <div class="skill javascript">
           <div class="fill" style="width:75%">
             <div class="tag">Javascript</div>
           </div>
           <span class="perct">75%</span>
         </div>
 
-        <div class="skill">
+        <div class="skill node">
           <div class="fill" style="width:60%">
             <div class="tag">Node.js</div>
           </div>
           <span class="perct">60%</span>
         </div>
 
-        <div class="skill">
+        <div class="skill react">
           <div class="fill" style="width:40%">
             <div class="tag">React</div>
           </div>
           <span class="perct">40%</span>
         </div>
 
-        <div class="skill">
+        <div class="skill angular">
           <div class="fill" style="width:30%">
             <div class="tag">Angular</div>
           </div>
@@ -120,21 +148,21 @@
 
         <h3>Back-End Skills</h3>
 
-        <div class="skill">
+        <div class="skill java">
           <div class="fill" style="width:80%">
             <div class="tag">Java</div>
           </div>
           <span class="perct">80%</span>
         </div>
 
-        <div class="skill">
+        <div class="skill ruby">
           <div class="fill" style="width:70%">
             <div class="tag">Ruby</div>
           </div>
           <span class="perct">70%</span>
         </div>
 
-        <div class="skill">
+        <div class="skill python">
           <div class="fill" style="width:60%">
             <div class="tag">Python</div>
           </div>
@@ -143,28 +171,28 @@
 
         <h3>UI/UX Skills</h3>
 
-        <div class="skill">
+        <div class="skill photoshop">
           <div class="fill" style="width:95%">
             <div class="tag">Photoshop</div>
           </div>
           <span class="perct">95%</span>
         </div>
 
-        <div class="skill">
+        <div class="skill after-effects">
           <div class="fill" style="width:80%">
             <div class="tag">After Effects</div>
           </div>
           <span class="perct">80%</span>
         </div>
 
-        <div class="skill">
+        <div class="skill ui-design">
           <div class="fill" style="width:75%">
             <div class="tag">UI Design</div>
           </div>
           <span class="perct">75%</span>
         </div>
 
-        <div class="skill">
+        <div class="skill illustrator">
           <div class="fill" style="width:60%">
             <div class="tag">Illustrator</div>
           </div>
@@ -174,54 +202,199 @@
     </div>
   </div>
 
-  <div id="projects" class="section">
+  <!--                             -->
+  <!--       PROJECTS SECTION      -->
+  <!--                             -->
+  <div id="projects" class="section projects">
     <h2>Projects</h2>
     <div class="after-line"></div>
     <div class="buttons">
-      <a href="" class="language all active">All</a>
-      <a href="" class="language javascript">Javascript</a>
-      <a href="" class="language nodejs">Node.js</a>
-      <a href="" class="language react">React</a>
-      <a href="" class="language ruby">Ruby</a>
-      <a href="" class="language python">Python</a>
-      <a href="" class="language java">Java</a>
+      <!-- These buttons will be able to filter my projects by what utilities they used -->
+      <a class="language all active-l">All</a>
+      <a class="language javascript">Javascript</a>
+      <a class="language nodejs">Node.js</a>
+      <a class="language react">React</a>
+      <a class="language angular">Angular</a>
+      <a class="language ruby">Ruby</a>
+      <a class="language python">Python</a>
+      <a class="language java">Java</a>
+    </div>
+    <div class="boxes">
+      <!-- Each box is a project and clicking it will reveal more information of said project -->
+      <div class="box">
+        <img src="https://cdn-images-1.medium.com/max/800/1*JraQKE7IrhgPEGmqW4hzEQ.png">
+        <div class="modal">
+          <div class="modal-content">
+            <a href="https://google.com" target="_blank"><img src="https://cdn-images-1.medium.com/max/800/1*JraQKE7IrhgPEGmqW4hzEQ.png"></a>
+            <div class="modal-text">
+              <h1>Business/Website Name</h1>
+              <h3>Category</h3>
+              <p>This business/website is all about showing off my skills and I really like it and I worked really hard on it. I would really appreaciate your support by giving me a job so I can do this at your company.</p>
+              <a><i class="fa fa-external-link" aria-hidden="true"></i>View Site</a>
+            </div>
+            <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+            <div class="modal-bg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://via.placeholder.com/350x300">
+        <div class="modal">
+          <div class="modal-content">
+            <img src="https://cdn-images-1.medium.com/max/800/1*JraQKE7IrhgPEGmqW4hzEQ.png">
+            <div class="modal-text">
+              <h1>Business/Website Name</h1>
+              <h3>Category</h3>
+              <p>This business/website is all about showing off my skills and I really like it and I worked really hard on it. I would really appreaciate your support by giving me a job so I can do this at your company.</p>
+              <a><i class="fa fa-external-link" aria-hidden="true"></i>View Site</a>
+            </div>
+            <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+            <div class="modal-bg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://via.placeholder.com/350x300">
+        <div class="modal">
+          <div class="modal-content">
+            <img src="https://cdn-images-1.medium.com/max/800/1*JraQKE7IrhgPEGmqW4hzEQ.png">
+            <div class="modal-text">
+              <h1>Business/Website Name</h1>
+              <h3>Category</h3>
+              <p>This business/website is all about showing off my skills and I really like it and I worked really hard on it. I would really appreaciate your support by giving me a job so I can do this at your company.</p>
+              <a><i class="fa fa-external-link" aria-hidden="true"></i>View Site</a>
+            </div>
+            <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+            <div class="modal-bg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://via.placeholder.com/350x300">
+        <div class="modal">
+          <div class="modal-content">
+            <img src="https://cdn-images-1.medium.com/max/800/1*JraQKE7IrhgPEGmqW4hzEQ.png">
+            <div class="modal-text">
+              <h1>Business/Website Name</h1>
+              <h3>Category</h3>
+              <p>This business/website is all about showing off my skills and I really like it and I worked really hard on it. I would really appreaciate your support by giving me a job so I can do this at your company.</p>
+              <a><i class="fa fa-external-link" aria-hidden="true"></i>View Site</a>
+            </div>
+            <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+            <div class="modal-bg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://via.placeholder.com/350x300">
+        <div class="modal">
+          <div class="modal-content">
+            <img src="https://cdn-images-1.medium.com/max/800/1*JraQKE7IrhgPEGmqW4hzEQ.png">
+            <div class="modal-text">
+              <h1>Business/Website Name</h1>
+              <h3>Category</h3>
+              <p>This business/website is all about showing off my skills and I really like it and I worked really hard on it. I would really appreaciate your support by giving me a job so I can do this at your company.</p>
+              <a><i class="fa fa-external-link" aria-hidden="true"></i>View Site</a>
+            </div>
+            <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+            <div class="modal-bg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://via.placeholder.com/350x300">
+        <div class="modal">
+          <div class="modal-content">
+            <img src="https://cdn-images-1.medium.com/max/800/1*JraQKE7IrhgPEGmqW4hzEQ.png">
+            <div class="modal-text">
+              <h1>Business/Website Name</h1>
+              <h3>Category</h3>
+              <p>This business/website is all about showing off my skills and I really like it and I worked really hard on it. I would really appreaciate your support by giving me a job so I can do this at your company.</p>
+              <a><i class="fa fa-external-link" aria-hidden="true"></i>View Site</a>
+            </div>
+            <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+            <div class="modal-bg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://via.placeholder.com/350x300">
+        <div class="modal">
+          <div class="modal-content">
+            <img src="https://cdn-images-1.medium.com/max/800/1*JraQKE7IrhgPEGmqW4hzEQ.png">
+            <div class="modal-text">
+              <h1>Business/Website Name</h1>
+              <h3>Category</h3>
+              <p>This business/website is all about showing off my skills and I really like it and I worked really hard on it. I would really appreaciate your support by giving me a job so I can do this at your company.</p>
+              <a><i class="fa fa-external-link" aria-hidden="true"></i>View Site</a>
+            </div>
+            <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+            <div class="modal-bg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://via.placeholder.com/350x300">
+        <div class="modal">
+          <div class="modal-content">
+            <img src="https://cdn-images-1.medium.com/max/800/1*JraQKE7IrhgPEGmqW4hzEQ.png">
+            <div class="modal-text">
+              <h1>Business/Website Name</h1>
+              <h3>Category</h3>
+              <p>This business/website is all about showing off my skills and I really like it and I worked really hard on it. I would really appreaciate your support by giving me a job so I can do this at your company.</p>
+              <a><i class="fa fa-external-link" aria-hidden="true"></i>View Site</a>
+            </div>
+            <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+            <div class="modal-bg"></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div id="contact" class="section">
+  <!--                             -->
+  <!--       CONTACT SECTION       -->
+  <!--                             -->
+  <div id="contact" class="contact">
     <h2>Contact</h2>
     <div class="after-line"></div>
     <div class="social-links">
-      <a href="">
+      <!-- Social Links -->
+      <a href="https://github.com/Jkerz" target="_blank">
         <div class="icon">
           <i class="fa fa-github" aria-hidden="true"></i>
         </div>
       </a>
-      <a href="">
+      <a href="https://www.linkedin.com/in/joshua-kelley-1950b315b/" target="_blank">
         <div class="icon">
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
-      </div>
-    </a>
-      <a href="">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </div>
+      </a>
+      <a href="https://codepen.io/JoshLore/" target="_blank">
         <div class="icon">
           <i class="fa fa-codepen" aria-hidden="true"></i>
         </div>
       </a>
-      <a href="">
+      <a href="https://www.behance.net/loredevelo20a8" target="_blank">
         <div class="icon">
-          <i class="fa fa-dribbble" aria-hidden="true"></i>
+          <i class="fa fa-behance" aria-hidden="true"></i>
         </div>
       </a>
-      <a href="">
+      <a href="https://www.facebook.com/joshua.kelley.7946" target="_blank">
         <div class="icon">
           <i class="fa fa-facebook" aria-hidden="true"></i>
         </div>
       </a>
-
     </div>
   </div>
 
 
-  <script src=""></script>
+  <!--                             -->
+  <!--    MY AMAZING JAVASCRIPT    -->
+  <!--                             -->
+  <script src="scripts/index.js"></script>
 </body>
 </html>
+
+<!-- FIN -->

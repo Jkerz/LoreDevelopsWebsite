@@ -1,3 +1,11 @@
+/* ------------------- */
+/* UNIVERSAL SELECTORS */
+/* ------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   margin: 0;
@@ -14,9 +22,11 @@ a {
   font-weight: 300;
   border-radius: .15rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
-a:hover {
+a:hover,
+a:focus {
   background-color: rgba(39, 155, 190, 0.5);
   color: white;
 }
@@ -26,6 +36,18 @@ p {
   line-height: 1.7rem;
 }
 
+h2{
+  margin: 0 0 10px;
+  color: #444649;
+  text-transform: uppercase;
+  font-size: 2.4em;
+  text-align: center;
+}
+
+/* ------------------- */
+/*  THE HERO (NAVBAR)  */
+/* ------------------- */
+
 .hero {
   background-color: #31b0d5;
   position: sticky;
@@ -34,7 +56,8 @@ p {
   display: flex;
   justify-content: center;
   padding: 15px 0;
-  /* border-bottom: 4px solid #444649;*/
+  z-index: 1;
+  /* For when hovers think they're better than a hero */
 }
 
 .navs {
@@ -42,35 +65,60 @@ p {
 }
 
 .navs a {
-  padding: 10px 16px;
-  transition: 0.3s;
+  padding: 10px 5px;
+  font-size: 1.2rem;
+  transition: 0.4s;
+  font-weight: 500;
+}
+
+.logo {
+  display: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.logo span {
+  font-weight: 800;
+}
+
+.logo:hover,
+.logo:focus {
+  background-color: transparent;
 }
 
 .active {
   color: #31b0d5;
   background-color: white;
-  font-weight: 400;
+  font-weight: 600;
   box-shadow: 1px 2px 2px rgba(0,0,0,0.12);
+  transition: .5s;
 }
 
-.active:hover {
+.active:hover,
+.active:focus {
   background-color: rgb(89, 191, 220);
 }
 
+/* ------------------- */
+/*        HEADER       */
+/* ------------------- */
+
 .header {
-  height: 30vh; /*height to 100% of view height*/
-  min-height: 550px;
-  background: #31b0d5; /*background color to blue*/
-  margin-bottom: 0; /*no bottom margin*/
+  height: 100vh;
+  width: 100%;
+  min-height: 500px;
+  background-color: #31b0d5;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 
   /*text configurations here*/
   line-height: normal;
   font-weight: 400;
   color: white;
   text-align: center;
-  padding-top: 150px;
   text-shadow: 0 1px 2px rgba(0,0,0,0.10);
   letter-spacing: 1.4px;
 }
@@ -83,25 +131,47 @@ p {
 }
 
 .header p {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 0 20px;
   line-height: 1em;
 }
 
+.work-btn {
+  color: #31b0d5;
+  margin-top: 7em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 20em;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.work-btn:hover,
+.work-btn:focus{
+  border: 1px solid white;
+}
+
+.work-btn h5 {
+  text-shadow: none;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+/* ------------------- */
+/* SECTIONAL SELECTORS */
+/* ------------------- */
+
 .section {
   width: 90%;
-  margin: 0 auto;
+  margin: 40px auto 50px;
   border-bottom: 1px solid lightgrey;
   padding-bottom: 30px;
 }
 
-h2{
-  margin: 30px 0 10px;
-  color: #444649;
-  text-transform: uppercase;
-  font-size: 2.5em;
-  text-align: center;
-}
 
 .after-line{
   width: 70px;
@@ -110,6 +180,10 @@ h2{
   margin: 0 auto;
   margin-bottom: 50px;
 }
+
+/* ------------------- */
+/*       ABOUT ME      */
+/* ------------------- */
 
 .about-me {
   padding-bottom: 20px;
@@ -159,14 +233,15 @@ h2{
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: #31b0d5;
+  background-image: linear-gradient(#31b0d5, #31b0d5);
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .circle i {
-  font-size: 4em;
+  font-size: 5em;
   color: white;
 }
 
@@ -196,6 +271,7 @@ h2{
 .fill{
   background-color: #31b0d5;
   height: 100%;
+  transition: 1.5s;
 }
 
 .perct{
@@ -215,6 +291,16 @@ h2{
   height: 100%;
 }
 
+/* ------------------- */
+/*       PROJECTS      */
+/* ------------------- */
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -231,27 +317,191 @@ h2{
   margin: 0 .5rem;
 }
 
+.active-l {
+  background-color: #31b0d5;
+  color: white;
+  box-shadow: 1px 2px 2px rgba(0,0,0,0.12);
+}
+
+.language:hover,
+.language:focus {
+  background-color: #6bc5e1;
+}
+
+.boxes {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  height: 300px;
+  width: 350px;
+  background-color: #6bc5e1;
+}
+
+.box img {
+  transition: .5s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.box img:hover,
+.box img:focus {
+  opacity: .5;
+  cursor: pointer;
+}
+
+/* ---------------- */
+/*       MODAL      */
+/* ---------------- */
+
+.modal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height */
+}
+
+.modal-content {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(249, 249, 249);
+}
+
+.modal-content img {
+  height: 30%;
+}
+
+.modal a {
+  width: 100%;
+  object-fit: cover;
+  background-color: transparent;
+}
+
+.modal a img:hover,
+.modal a img:focus {
+  opacity: .7;
+}
+
+.modal-text {
+  padding-top: 1rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.modal-text h1 {
+  margin-bottom: .1rem;
+  line-height: 1.5rem;
+  font-size: 1.5em;
+  color: #262626;
+}
+
+.modal-text h3 {
+  margin-top: 0;
+  margin-bottom: .1rem;
+  color: #bbb;
+  font-size: 1.2em;
+}
+
+.modal-text p {
+  margin-top: 0;
+  border-top: 1px solid lightgrey;
+  padding-top: 1rem;
+  font-size: 1em;
+  color: #666;
+  font-weight: 500;
+  line-height: 1.3em;
+  margin-bottom: 3em;
+}
+
+.modal-text a {
+  background-color: #6bc5e1;
+  padding: 1em;
+  display: flex;
+  width: 10rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition: .5s;
+  text-transform: uppercase;
+}
+
+.modal-text a:hover,
+.modal-text a:focus {
+  background-color: transparent;
+  color: #6bc5e1;
+}
+
+.close {
+  margin: 0;
+  color: #e16b6b;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  padding: 3rem;
+  transition: .3s;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+}
+
+.close:hover,
+.close:focus {
+  color: #d42b2b;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-bg{
+  position: absolute;
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%;
+  z-index: -1;
+}
+
+/* ------------------- */
+/*       CONTACT       */
+/* ------------------- */
+
+#contact {
+  width: 90%;
+  margin: 40px auto 50px;
+  padding-bottom: 30px;
+}
+
 .social-links {
   display: flex;
   justify-content: center;
 }
 
 .social-links a {
-  font-size: 3rem;
   margin: 0 15px;
 }
 
 .icon {
   display: table;
-  width: 55px;
-  height: 55px;
-  text-align: center;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: space-around;
   background: #31b0d5;
   font-size: 2rem;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
-.icon:hover {
+.icon:hover,
+.icon:focus {
   background-color: rgb(89, 191, 220);
   height: 60px;
   width: 60px;
@@ -266,14 +516,40 @@ h2{
 
 /* Break points: 768px and 960px */
 
-@media (min-width: 768px) {
+/* ------------------- */
+/*    MEDIA QUERIES    */
+/* ------------------- */
+/*        TABLET       */
+/* ------------------- */
+/*        768px        */
+/* ------------------- */
+
+@media only screen and (min-width: 768px) {
+  .navs a {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+
+  .header {
+    height: 100vh;
+  }
+
+  .work-btn {
+    display: flex;
+  }
 
   .hero {
-    justify-content: flex-end;
+    justify-content: space-between;
+    transition: 0.3s;
+  }
+
+  .logo {
+    display: inline-block;
+    margin-left: 50px;
   }
 
   .navs {
-    margin-right: 100px;
+    margin-right: 50px;
   }
 
   .snippet {
@@ -283,9 +559,35 @@ h2{
   p {
     font-size: 1.1em;
   }
+
+  .modal-content {
+    width: 50%;
+    height: 80%;
+  }
+
+  .close {
+    color: #bbb;
+    display: none;
+    float: right;
+  }
 }
 
-@media (min-width: 960px) {
+/* ------------------- */
+/*       DESKTOP       */
+/* ------------------- */
+/*        960px        */
+/* ------------------- */
+
+@media only screen and (min-width: 960px) {
+  .modal img {
+    height: 50%;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.4rem;
+  }
+
   .header h1 {
     font-size: 5rem;
   }
@@ -298,9 +600,20 @@ h2{
     display: flex;
   }
 
-  p {
-    font-size: 1em;
-    line-height: 1.4rem;
+  .logo {
+    margin-left: 80px;
+  }
+
+  .navs {
+    margin-right: 80px;
+  }
+
+  .work-btn {
+    width: 25rem;
+  }
+
+  .work-btn h5 {
+    font-size: 2rem;
   }
 
   .about-me {
@@ -318,4 +631,9 @@ h2{
   .snippet p{
     width: 85%
   }
+
 }
+
+/* ------------------- */
+/*         FIN         */
+/* ------------------- */
