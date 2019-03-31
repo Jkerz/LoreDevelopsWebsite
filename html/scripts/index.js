@@ -99,7 +99,7 @@ window.onscroll = function () {
 
   console.log
   if(done && pos > about_location - 76 && pos < projects_location && !mobile){
-    var perct = [95, 85, 75, 60, 40, 30, 80, 70, 60, 95, 80, 75, 60];
+    var perct = [95, 85, 75, 60, 50, 80, 70, 70, 60, 95, 80, 75, 60];
     for(var i=0; i < perct.length; i++){
       document.getElementsByClassName("fill")[i].style.width = ''+perct[i]+'%';
     }

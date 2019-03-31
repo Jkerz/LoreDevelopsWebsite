@@ -27,7 +27,7 @@ a {
 
 a:hover,
 a:focus {
-  background-color: rgba(39, 155, 190, 0.5);
+  background-color: #30569d;
   color: white;
 }
 
@@ -49,7 +49,7 @@ h2{
 /* ------------------- */
 
 .hero {
-  background-color: #31b0d5;
+  background-color: #30569d;
   position: sticky;
   top: 0;
   width: 100%;
@@ -87,7 +87,7 @@ h2{
 }
 
 .active {
-  color: #31b0d5;
+  color: #30569d;
   background-color: white;
   font-weight: 600;
   box-shadow: 1px 2px 2px rgba(0,0,0,0.12);
@@ -96,7 +96,7 @@ h2{
 
 .active:hover,
 .active:focus {
-  background-color: rgb(89, 191, 220);
+  background-color: #30569d;
 }
 
 /* ------------------- */
@@ -107,7 +107,7 @@ h2{
   height: 100vh;
   width: 100%;
   min-height: 500px;
-  background-color: #31b0d5;
+  background-color: #30569d;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,7 +137,7 @@ h2{
 }
 
 .work-btn {
-  color: #31b0d5;
+  color: #30569d;
   margin-top: 7em;
   text-transform: uppercase;
   display: flex;
@@ -194,13 +194,19 @@ h2{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%
+  width: 40%;
+  margin-bottom: 1.5rem;
 }
 
 .about-me p {
   text-align: center;
   margin: 0 auto;
   width: 80%;
+}
+
+.color {
+  color: #30569d;
+  font-weight: 600;
 }
 
 .circles-wrapper{
@@ -233,7 +239,7 @@ h2{
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-image: linear-gradient(#31b0d5, #31b0d5);
+  background-image: linear-gradient(#30569d, #30569d);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,7 +275,7 @@ h2{
 }
 
 .fill{
-  background-color: #31b0d5;
+  background-color: #30569d;
   height: 100%;
   transition: 1.5s;
 }
@@ -308,7 +314,7 @@ h2{
 }
 
 .language {
-  color: #31b0d5;
+  color: #30569d;
   font-weight: 500;
   padding: .5rem 1rem;
   border-radius: .35rem;
@@ -318,14 +324,14 @@ h2{
 }
 
 .active-l {
-  background-color: #31b0d5;
+  background-color: #30569d;
   color: white;
   box-shadow: 1px 2px 2px rgba(0,0,0,0.12);
 }
 
 .language:hover,
 .language:focus {
-  background-color: #6bc5e1;
+  background-color: #30569d;
 }
 
 .boxes {
@@ -338,7 +344,7 @@ h2{
 .box {
   height: 300px;
   width: 350px;
-  background-color: #6bc5e1;
+  background-color: #30569d;
 }
 
 .box img {
@@ -378,11 +384,11 @@ h2{
 
 .modal-content img {
   height: 30%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .modal a {
-  width: 100%;
-  object-fit: cover;
   background-color: transparent;
 }
 
@@ -423,7 +429,7 @@ h2{
 }
 
 .modal-text a {
-  background-color: #6bc5e1;
+  background-color: #30569d;
   padding: 1em;
   display: flex;
   width: 10rem;
@@ -438,7 +444,7 @@ h2{
 .modal-text a:hover,
 .modal-text a:focus {
   background-color: transparent;
-  color: #6bc5e1;
+  color: #30569d;
 }
 
 .close {
@@ -449,7 +455,7 @@ h2{
   position: absolute;
   right: 1px;
   top: 1px;
-  padding: 3rem;
+  padding: 2rem;
   transition: .3s;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
 }
@@ -495,7 +501,7 @@ h2{
   width: 1.5em;
   height: 1.5em;
   text-align: space-around;
-  background: #31b0d5;
+  background: #30569d;
   font-size: 2rem;
   transition: 0.2s;
 }
